@@ -1,6 +1,6 @@
 This is just a fork/mirror of bw_plex, snapshot taken 4/16/2019
 
-This repo also contains a bash script (why do I ever write anything in bash?) which I use to invoke bw_plex directly against mp4 files within a folder and then copy them to a subfolder named "introremoved".
+This repo also contains a bash script (why do I ever write anything in bash?) which I use to invoke bw_plex directly against all mp4 files within a folder and then copy them to a subfolder named "introremoved" (which you must create manually prior to running the script). The script will then remove the intro losslessly (it does stick to keyframes, so you may not be able to get perfect results with this script or even without reencoding) and create two mp4 files (the portion before the intro, and the portion after the intro) and merge them back together again all losslessly and without re-encoding.
 
 Without getting into the bw_plex code, I couldn't improve the results or use the advanced (and super cool) features of bw_plex; However it worked very well for me (SG1 episodes).
 
