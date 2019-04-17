@@ -1,3 +1,13 @@
+This is just a fork/mirror of bw_plex, snapshot taken 4/16/2019
+
+This repo also contains a bash script (why do I ever write anything in bash?) which I use to invoke bw_plex directly against mp4 files within a folder and then copy them to a subfolder named "introremoved".
+
+Without getting into the bw_plex code, I couldn't improve the results or use the advanced (and super cool) features of bw_plex; However it worked very well for me (SG1 episodes).
+
+You must also change the hardcoded values for the length of the intro sequence (which in my case was around 57-60 seconds). Specifically the time from the first block of all black that preceeds the intro and the one that follows the intro. If no such blackness exists, the script should fall back on existing bw_plex logic which ought (one would suppose) to use the audio silence blocks (assuming those exist) that buffer the intro but I couldn't get any of the cool audiofingerprinting or ocr'ing to work without plex (without hacking the code, which I fully intend to do one day).
+
+The bash script is named removeintro (and is a bash file with no extension)
+
 # bw_plex
 [![Travis Status](https://travis-ci.org/Hellowlol/bw_plex.svg?branch=master)](https://travis-ci.org/Hellowlol/bw_plex)
 [![Cov](https://codecov.io/gh/hellowlol/bw_plex/branch/master/graph/badge.svg)](https://codecov.io/gh/hellowlol/bw_plex/branch/master)
